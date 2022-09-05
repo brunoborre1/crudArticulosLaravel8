@@ -17,12 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::resource('articulos', 'App\Http\Controllers\ArticuloController');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
